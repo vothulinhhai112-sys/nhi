@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chào Mừng Năm Mới</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #ff0000, #ffcc00);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .image-box img {
+            width: 300px;
+            max-width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .wish {
+            margin-top: 40px;
+            font-size: 24px;
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .flower {
+            position: fixed;
+            top: -50px;
+            font-size: 30px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hoa rơi -->
+    <script>
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.className = "flower";
+            flower.innerHTML = "🌸";
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, 6000);
+        }
+        setInterval(createFlower, 300);
+    </script>
+
+    <div class="container">
+        <h1>🎉 Chúc Mừng Năm Mới 🎉</h1>
+        <h2>Xuân An Khang – Tết Thịnh Vượng</h2>
+
+        <div class="image-box">
+            <img src="nhi1.jpg" alt="Trang trí Tết">
+        </div>
+
+        <div class="wish">
+            🌸 Năm mới xin chúc bạn 🌸<br><br>
+            ✨ Sức khỏe dồi dào<br>
+            💰 Tài lộc đầy nhà<br>
+            ❤️ Gia đình hạnh phúc<br>
+            🚀 Công việc hanh thông<br><br>
+            🌼 Vạn sự như ý – An khang thịnh vượng 🌼
+        </div>
+
+        <div class="footer">
+            © 2026 | Chào Xuân mới với thật nhiều niềm vui 🎊
+        </div>
+    </div>
+
+</body>
+</html>
